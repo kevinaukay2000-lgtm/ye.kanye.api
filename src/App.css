@@ -1,0 +1,116 @@
+:root {
+  --bg-color: #050a1a;
+  --card-bg: #0d152d;
+  --accent-color: #4dabff;
+  --text-main: #e0e6ed;
+  --text-muted: #8a9bbd;
+  --border-color: #1e2b4d;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.quote-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.quote-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-color);
+}
+
+.quote-header {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.kanye-badge {
+  background: var(--accent-color);
+  color: #050a1a;
+  font-weight: 800;
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 100px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.quote-content {
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.quote-text {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--text-main);
+}
+
+.loader, .error {
+  font-size: 18px;
+  color: var(--text-muted);
+}
+
+.error {
+  color: #ff6b6b;
+}
+
+.refresh-button {
+  background: var(--border-color);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  padding: 12px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.refresh-button:hover:not(:disabled) {
+  background: var(--accent-color);
+  color: #050a1a;
+  border-color: var(--accent-color);
+}
+
+.refresh-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.footer {
+  margin-top: 40px;
+  color: var(--text-muted);
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
